@@ -1,71 +1,41 @@
-﻿using HugsLib;
-using HugsLib.Settings;
+﻿using System.Reflection;
+using Harmony;
 using UnityEngine;
 using Verse;
 
-namespace Deep_Ore_Identifier
+namespace DeepOreIdentifier
 {
-	public class Main : ModBase
+	public class Main : Mod
 	{
-		private readonly float LabelOffsetFromMouse = 2f;
-
-		private readonly Color MessageBackgroundColour = new Color(0.15f, 0.15f, 0.15f, 0.8f);
-
-		public static SettingHandle<bool> DrawMouseoverBackground;
-
-		public static bool CheckForDraw;
-
-		public override string ModIdentifier => "DeepOreIdentifier";
-
-		private void DrawOreLabelOnMouseover()
+		public Main(ModContentPack content) : base(content)
 		{
-			IntVec3 mouseIntVec = UI.MouseCell();
+			GetSettings<Settings>();
 
-			if (!mouseIntVec.InBounds(Find.VisibleMap))
-			{
-				return;
-			}
+#if DEBUG
+			HarmonyInstance.DEBUG = true;
+#endif
 
-			ThingDef ore = Find.VisibleMap.deepResourceGrid.ThingDefAt(mouseIntVec);
+			HarmonyInstance harmony = HarmonyInstance.Create("dingo.deeporeidentifier");
+			harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-			if (ore != null)
-			{
-				string label = ore.label.CapitalizeFirst();
-				Vector2 mousePosition = Event.current.mousePosition;
-				Vector2 labelSize = Text.CalcSize(label);
-				Rect labelRect = new Rect(mousePosition.x - this.LabelOffsetFromMouse - labelSize.x, mousePosition.y - this.LabelOffsetFromMouse - labelSize.y, labelSize.x, labelSize.y);
-
-				if (DrawMouseoverBackground)
-				{
-					Rect backgroundRect = labelRect.ExpandedBy(1f);
-
-					//Verse.Messages.LiveMessage.Draw
-					GUI.color = this.MessageBackgroundColour;
-					GUI.DrawTexture(backgroundRect, BaseContent.WhiteTex);
-					GUI.color = Color.white;
-				}
-
-				Widgets.Label(labelRect, label);
-			}
+#if DEBUG
+			Log.Message("Deep Ore Identifier :: Injected Harmony patches.");
+#endif
 		}
 
-		public override void DefsLoaded()
+		public override void DoSettingsWindowContents(Rect inRect)
 		{
-			base.DefsLoaded();
+			base.DoSettingsWindowContents(inRect);
 
-			DrawMouseoverBackground = this.Settings.GetHandle("DrawMouseoverBackground", "DeepOreIdentifier_DrawMouseoverBackground".Translate(), "DeepOreIdentifier_Tooltip_DrawMouseoverBackground".Translate(), true);
+			Listing_Standard modOptions = new Listing_Standard();
+			modOptions.Begin(inRect);
+			modOptions.CheckboxLabeled("DeepOre.TextBackground".Translate(), ref Settings.TextBackground, "DeepOre.TextBackground.Tooltip".Translate());
+			modOptions.End();
 		}
 
-		public override void OnGUI()
+		public override string SettingsCategory()
 		{
-			base.OnGUI();
-
-			if (CheckForDraw && Event.current.type == EventType.Repaint)
-			{
-				this.DrawOreLabelOnMouseover();
-
-				CheckForDraw = false;
-			}
+			return "Deep Ore Identifier";
 		}
 	}
 }

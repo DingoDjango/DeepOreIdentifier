@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
-	<!-- Mod Settings -->
+	<DeepOre.TextBackground>Draw mouseover background</DeepOre.TextBackground>
 
-	<DeepOreIdentifier_DrawMouseoverBackground>Draw mouseover background</DeepOreIdentifier_DrawMouseoverBackground>
-
-	<!-- Tooltips -->
-
-	<DeepOreIdentifier_Tooltip_DrawMouseoverBackground>When hovering over an ore vein, draw the ore's name over a dark background to improve visibility.</DeepOreIdentifier_Tooltip_DrawMouseoverBackground>
+	<DeepOre.TextBackground.Tooltip>When hovering over an ore vein, draw the ore's name over a dark background to improve visibility.</DeepOre.TextBackground.Tooltip>
 
 </LanguageData>
