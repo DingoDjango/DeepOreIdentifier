@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModSyncNinjaData>
-  <ID>f66877ff-edab-4fb8-bf6f-57d6d1c60655</ID>
+  <ID>6dbfb748-6a8e-4fe4-9747-2a27a6686055</ID>
   <ModName>Deep Ore Identifier</ModName>
-  <Version>1.1.0.0</Version>
+  <Version>1.1.1.0</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>DingoDjango</Owner>
