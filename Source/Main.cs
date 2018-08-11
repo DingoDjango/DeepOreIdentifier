@@ -28,7 +28,7 @@ namespace DeepOreIdentifier
 			base.DoSettingsWindowContents(inRect);
 
 			Listing_Standard modOptions = new Listing_Standard();
-			modOptions.Begin(inRect);
+			modOptions.Begin(inRect.LeftHalf());
 			modOptions.CheckboxLabeled("DeepOre.TextBackground".Translate(), ref Settings.TextBackground, "DeepOre.TextBackground.Tooltip".Translate());
 			modOptions.End();
 		}
