@@ -9,7 +9,7 @@ namespace DeepOreIdentifier
 	{
 		public Main(ModContentPack content) : base(content)
 		{
-			GetSettings<Settings>();
+			this.GetSettings<Settings>();
 
 #if DEBUG
 			HarmonyInstance.DEBUG = true;
