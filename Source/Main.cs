@@ -16,11 +16,8 @@ namespace DeepOreIdentifier
 #endif
 
 			HarmonyInstance harmony = HarmonyInstance.Create("dingo.deeporeidentifier");
-			harmony.PatchAll(Assembly.GetExecutingAssembly());
 
-#if DEBUG
-			Log.Message("Deep Ore Identifier :: Injected Harmony patches.");
-#endif
+			harmony.PatchAll(Assembly.GetExecutingAssembly());
 		}
 
 		public override void DoSettingsWindowContents(Rect inRect)
