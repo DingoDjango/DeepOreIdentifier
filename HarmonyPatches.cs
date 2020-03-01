@@ -1,7 +1,7 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using Verse;
 
-namespace DeepOreIdentifier
+namespace Deep_Ore_Identifier
 {
 	public class HarmonyPatches
 	{

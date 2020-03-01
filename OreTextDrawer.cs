@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Verse;
 
-namespace DeepOreIdentifier
+namespace Deep_Ore_Identifier
 {
 	public class OreTextDrawer : GameComponent
 	{

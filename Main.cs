@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using Harmony;
+using HarmonyLib;
 using UnityEngine;
 using Verse;
 
-namespace DeepOreIdentifier
+namespace Deep_Ore_Identifier
 {
 	public class Main : Mod
 	{
@@ -15,7 +15,7 @@ namespace DeepOreIdentifier
 			HarmonyInstance.DEBUG = true;
 #endif
 
-			HarmonyInstance harmony = HarmonyInstance.Create("dingo.deeporeidentifier");
+			Harmony harmony = new Harmony("dingo.deeporeidentifier");
 
 			harmony.PatchAll(Assembly.GetExecutingAssembly());
 		}

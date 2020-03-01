@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DeepOreIdentifier")]
+[assembly: AssemblyTitle("Deep Ore Identifier")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DeepOreIdentifier")]
-[assembly: AssemblyCopyright("Copyright Dingo ©  2018")]
+[assembly: AssemblyProduct("Deep Ore Identifier")]
+[assembly: AssemblyCopyright("Copyright © Dingo 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("789d332a-6125-4adf-9172-8d32057428c9")]
+[assembly: Guid("74181100-67b7-4a85-9677-da42ae0743ab")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,8 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.2059.1")]
-[assembly: AssemblyFileVersion("1.0.2059.1")]
+[assembly: AssemblyVersion("1.1.7364.1")]
+[assembly: AssemblyFileVersion("1.1.7364.1")]

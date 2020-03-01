@@ -1,6 +1,6 @@
 ﻿using Verse;
 
-namespace DeepOreIdentifier
+namespace Deep_Ore_Identifier
 {
 	public class Settings : ModSettings
 	{
