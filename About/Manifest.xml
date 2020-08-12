@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
 	<identifier>DeepOreIdentifier</identifier>
-	<version>1.1.7364.1</version>
+	<version>1.2.2723.1</version>
 	<manifestUri>https://raw.githubusercontent.com/DingoDjango/DeepOreIdentifier/master/About/Manifest.xml</manifestUri>
 	<downloadUri>https://github.com/DingoDjango/DeepOreIdentifier/releases/latest</downloadUri>
 </Manifest>
